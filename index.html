@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>My First Web Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+         <h1>Welcome to Web Programming</h1>
+         <p>Vanessa Habasune - 202503104</p>
+    </header>
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#hobbies">My Hobbies</a>
+        <a href="#learning">My learning Plan</a>
+        <a href="#weekly-plan">Weekly Web Plan</a>
+        <a href="#photos">My Photos</a>
+        <a href="#media">My Media</a>
+        <a href="#contact">Contact</a>
+        <a href="https://developer.mozilla.org/en-US/docs/learn_web_development"
+           target="_blank">Learn Web Development</a>
+    </nav>
+    <main>
+        <section id="about" class="content-section">
+             <h2>About Me</h2>
+             <p>
+                My name is Vanessa Habasune, and I am a Computer Science student at Mulungushi University.I am interested in learning how websites are created and how technology can be used to solve problems.
+                I am currently developing my skills in web technologies, including HTML and CSS. I enjoy learning new things, improving my computer skills, and exploring different areas of technology. My goal is to become more confident in creating useful and attractive websites.
+             </p>
+        </section>
+        <section id="hobbies" class="content-section">
+            <h2>My Hobbies</h2>
+
+            <ul>
+                <li>Reading</li>
+                <li>Listening to music</li>
+                <li>Watching movies</li>
+            </ul>
+        </section>
+        <section id="learning" class="content-section">
+            <h2>My Learning Plan</h2>
+
+            <ol>
+                <li>Practice HTML and CSS regularly by creating small web pages.</li>
+                <li>Learning how to make websites responsive on different screen sizes.</li>
+                <li>Learn JavaScript to add interactive features to my websites.</li>
+                <li>Build small web projects to practise and improve my skills.</li>
+            </ol>
+        </section>
+        <section id="weekly-plan" class="content-section">
+            <h2>Weekly Web Plan</h2>
+
+            <table>
+                <caption>My Weekly Web Technologies Learning Plan</caption>
+
+                <tr>
+                    <th>Day</th>
+                    <th>Topic</th>
+                    <th>Practice Task</th>
+                </tr>
+
+                <tr>
+                    <td>Monday</td>
+                    <td>HTML</td>
+                    <td>Practice creating and structuring web pages.</td>
+                </tr>
+
+                <tr>
+                    <td>Wednesday</td>
+                    <td>CSS</td>
+                    <td>Practice styling pages using colours, fonts and layouts.</td>
+                </tr>
+
+                <tr>
+                    <td>Friday</td>
+                    <td>JavaScript</td>
+                    <td>Practice adding simple interactive features.</td>
+                </tr>
+            </table>
+        </section>
+        <section id="photos" class="content-section">
+            <h2>My Photos</h2>
+
+             <figure>
+            <img src="images/image1.jpeg" alt="A photo representing my interest">
+            <figcaption>A Photo representing one of my interest.</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/image2.jpeg" alt="A photo representing my studies">
+            <figcaption>A photo representing my studies.</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/image3.jpeg" alt="A photo my hobbies">
+            <figcaption>A photo representing one of my hobbies.</figcaption>
+        </figure>
+        </section>
+        <section id="media" class="content-section">
+            <h2>My Media</h2>
+
+            <h3>Introduction Video</h3>
+            <video controls>
+                <source src="videos/intro.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+
+            <p> 
+                This short video introduces me, my programme, and the web development skill I hope to learn. 
+            </p>
+
+            <h3>Audio About My Hobby</h3>
+            <audio controls>
+                <source src="videos/voice.mp4" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <p>
+                This audio describes one of my hobbies and explains why I enjoy it.
+            </p>
+        </section>
+        <section id="contact" class="content-section">
+            <h2>Contact Me</h2>
+
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <br><br>
+
+                <label for="topic">Topic:</label>
+                <select id="topic" name="topic">
+                    <option Value="web">Web Technologies</option>
+                    <option Value="hobbies">Hobbies</option>
+                    <option Value="studies">Studies</option>
+                </select>
+
+                <br><br>
+                <label for="message">Message:</label>
+                <br>
+                <textarea id="message" name="message" rows="5" cols="30" required></textarea>
+                
+                <br><br>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Vanessa Habasune. All rights reserved.</p>
+    </footer>
+   
+</body>
+</html>
