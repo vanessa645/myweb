@@ -320,3 +320,59 @@ body.dark-mode #messagePreview {
         padding: 7px;
     }
 }
+.gallery-trigger {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: zoom-in;
+}
+
+.gallery-trigger img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-trigger:hover img {
+    transform: scale(1.03);
+}
+
+#photoViewer {
+    width: min(90%, 700px);
+    max-height: 90vh;
+    padding: 20px;
+    border: none;
+    border-radius: 12px;
+    text-align: center;
+}
+
+#photoViewer::backdrop {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+#expandedPhoto {
+    display: block;
+    max-width: 100%;
+    max-height: 70vh;
+    margin: 15px auto;
+    object-fit: contain;
+}
+
+#closePhotoViewer {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    background: #2c3e50;
+    color: white;
+    cursor: pointer;
+}
+
+.gallery-trigger:focus-visible,
+#closePhotoViewer:focus-visible {
+    outline: 3px solid #e67e22;
+    outline-offset: 3px;
+}

@@ -118,3 +118,28 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("messageError").textContent = "";
     });
 });
+```javascript
+// Photo gallery viewer
+const photoViewer = document.getElementById("photoViewer");
+const expandedPhoto = document.getElementById("expandedPhoto");
+const photoCaption = document.getElementById("photoCaption");
+const closePhotoViewer = document.getElementById("closePhotoViewer");
+
+document.querySelectorAll(".gallery-trigger").forEach((button) => {
+    button.addEventListener("click", () => {
+        const image = button.querySelector("img");
+        const figure = button.closest("figure");
+
+        expandedPhoto.src = image.src;
+        expandedPhoto.alt = image.alt;
+        photoCaption.textContent =
+            figure.querySelector("figcaption").textContent;
+
+        photoViewer.showModal();
+    });
+});
+
+closePhotoViewer.addEventListener("click", () => {
+    photoViewer.close();
+});
+```

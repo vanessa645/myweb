@@ -109,21 +109,39 @@
         <section id="photos" class="content-section">
             <h2>My Photos</h2>
 
-             <figure>
-            <img src="images/image1.jpeg" alt="A photo representing my interest">
-            <figcaption>A Photo of me.</figcaption>
-        </figure>
+            <figure>
+                <button type="button" class="gallery-trigger"
+                        aria-label="View larger photo: A photo of me">
+                    <img src="images/image1.jpeg"
+                         alt="A photo representing my interest">
+                </button>
+                <figcaption>A Photo of me.</figcaption>
+            </figure>
 
-        <figure>
-            <img src="images/image2.jpeg" alt="A photo representing my studies">
-            <figcaption>A photo of me at university.</figcaption>
-        </figure>
+            <figure>
+                <button type="button" class="gallery-trigger"
+                        aria-label="View larger photo: Me at university">
+                <img src="images/image2.jpeg"
+                     alt="A photo representing my studies">
+                </button>
+                <figcaption>A photo of me at university.</figcaption>
+            </figure>
 
-        <figure>
-            <img src="images/image3.jpeg" alt="A photo my hobbies">
-            <figcaption>A photo of me.</figcaption>
-        </figure>
+            <figure>
+                <button type="button" class="gallery-trigger"
+                         aria-label="View larger photo: My hobbies">
+                <img src="images/image3.jpeg"
+                      alt="A photo of my hobbies">
+                </button>
+                <figcaption>A photo of me.</figcaption>
+            </figure>
         </section>
+
+        <dialog id="photoViewer">
+           <button type="button" id="closePhotoViewer">Close ✕</button>
+           <img id="expandedPhoto" src="" alt="">
+            <p id="photoCaption"></p>
+        </dialog>
         <section id="media" class="content-section">
             <h2>My Media</h2>
 
