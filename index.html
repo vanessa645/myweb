@@ -8,7 +8,13 @@
 </head>
 <body>
     <header>
+        <button type="button" id="themeToggle">Switch to Dark Mode</button>
+
          <h1>Welcome to Web Programming</h1>
+         <p id="welcomeMessage"></p>
+         <button type="button" id="changeWelcomeBtn">
+    Click for a New Welcome
+</button>
          <p>Vanessa Habasune - 202503104</p>
     </header>
     <nav>
@@ -121,41 +127,60 @@
                 This audio describes one of my hobbies and explains why I enjoy it.
             </p>
         </section>
-        <section id="contact" class="content-section">
+
+         <section id="contact" class="content-section">
             <h2>Contact Me</h2>
+            <p>Complete this form to validate your details and preview your message.</p>
 
-            <form action="#" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+            <form id="contactForm" novalidate>
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" autocomplete="name" required>
+                    <small id="nameError" class="error"></small>
+                </div>
 
-                <br><br>
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+                    <small id="emailError" class="error"></small>
+                </div>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <div class="form-group">
+                    <label for="topic">Topic:</label>
+                    <input type="text" id="topic" name="topic">
+                </div>
 
-                <br><br>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <small id="messageError" class="error"></small>
+                </div>
 
-                <label for="topic">Topic:</label>
-                <select id="topic" name="topic">
-                    <option Value="web">Web Technologies</option>
-                    <option Value="hobbies">Hobbies</option>
-                    <option Value="studies">Studies</option>
-                </select>
-
-                <br><br>
-                <label for="message">Message:</label>
-                <br>
-                <textarea id="message" name="message" rows="5" cols="30" required></textarea>
-                
-                <br><br>
-
+                <button type="button" id="previewBtn">Preview Message</button>
+                <button type="reset">Clear Form</button>
                 <button type="submit">Submit</button>
-            </form>
+                <p id="formFeedback" aria-live="polite"></p>
+            </form>    
+
+            <div id="messagePreview" hidden>
+                <h3>Message Preview</h3>
+                <p><strong>Name:</strong> <span id="previewName"></span></p>
+                <p><strong>Email:</strong> <span id="previewEmail"></span></p>
+                <p><strong>Topic:</strong> <span id="previewTopic"></span></p>
+                <p><strong>Message:</strong></p>
+                <p id="previewMessage"></p>
+
+                 <p><em>Browser demonstration only — no message is sent.</em></p>
+            </div>
         </section>
+
     </main>
     <footer>
         <p>&copy; 2026 Vanessa Habasune. All rights reserved.</p>
     </footer>
+
+<script src="js/script.js" defer></script>
+
    
 </body>
 </html>
